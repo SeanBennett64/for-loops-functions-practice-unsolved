@@ -6,10 +6,18 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
+  let maxIndex = 0;
 
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].balance > array[maxIndex].balance) {
+      maxIndex = i;
+    }
+  }
+  const result = [];
+  
+  result.push(array[maxIndex]);
+  return result;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-8"
